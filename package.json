@@ -1,0 +1,14 @@
+{
+  "name": "emberwave",
+  "version": "1.0.0",
+  "scripts": {
+    "start:dev": "concurrently \"cd client && pnpm dev\" \"cd server && yarn start:dev\"",
+    "deploy:prod": "concurrently \"yarn deploy-client:prod\" \"yarn deploy-server:prod\"",
+    "deploy-client:prod": "cd client && yarn build && yarn start",
+    "deploy-server:prod": "cd server && tsc && node dist/index.js"
+  },
+  "devDependencies": {
+    "concurrently": "^7.3.0",
+    "nodemon": "^2.0.19"
+  }
+}

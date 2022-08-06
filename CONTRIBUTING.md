@@ -21,4 +21,5 @@ the client is made with nextjs, typescript, styled by tailwind, and uses apollo-
 # server
 
 the server is using mongodb and uses apollo-server-express
+we also use prisma use `pnpm prisma:gen` to generate a new prisma client
 it supports rest and graphql but we dont really use rest
